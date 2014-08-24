@@ -1,0 +1,60 @@
+<html>
+
+<head>
+
+
+<meta name = "viewport" content = "user-scalable = no">
+
+<link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+
+<style>
+
+ canvas{
+
+ position:absolute;
+ top:0px;
+ left:0px;
+
+ }
+
+ body{
+
+   font-family: 'Press Start 2P', cursive;
+
+ }
+
+</style>
+
+</head>
+
+
+<body>
+
+<canvas id = "bg"></canvas>
+<canvas id = "grid"></canvas>
+<canvas id = "player"></canvas>
+<canvas id = "enemy"></canvas>
+<canvas id = "bound"></canvas>
+<canvas id = "ui"></canvas>
+
+<script src = "src/mouseHandle.js"></script>
+<script src = "src/soundLoader.js"></script>
+<script src = "src/jsfxr.js"></script>
+<script src = "src/rules.js"></script>
+<script src = "src/enemy.js"></script>
+<script src = "src/ui.js"></script>
+<script src = "src/grid.js"></script>
+<script src = "src/handle.js"></script>
+<script src = "src/main.js"></script>
+
+<embed height = "50" width = "100" src = "bgMusic.mp3" LOOP = TRUE>
+
+<script>
+
+startGame();
+
+</script>
+
+</body>
+
+</html>
