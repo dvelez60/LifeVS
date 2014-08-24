@@ -33,7 +33,7 @@ function SoundLoader(){
  this.startMusic = function(){
 
   var mus = new Audio();
-  mus.src = "bgMusic.wav";
+  mus.src = "bgMusic.mp3";
   mus.play();
   console.log("nananananana");
 
