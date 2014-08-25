@@ -353,7 +353,7 @@ case 6:
 
 break;
 
-case 9:
+case 1:
 
   //// small ship
 
