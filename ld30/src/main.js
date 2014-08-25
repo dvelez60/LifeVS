@@ -14,10 +14,23 @@
 var can, ctx, pcan, pctx, bcan, bctx, uican, uictx, ecan, ectx;
 
 /// vars and stuffff
+var mobile = false;
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent ) ){
+
+  mobile = true;
+
+}
 var SL = new SoundLoader();
 var FPS = 5;
-var w = window.innerWidth;
-var h = window.innerHeight;
+if(mobile){
+  var w = window.innerWidth;
+  var h = window.innerHeight;
+}else{
+
+  var w = 800;
+  var h = 480;
+
+}
 var blockSize = 32;
 var cols, rows , tot;
 var hanTick = false;
@@ -32,7 +45,6 @@ var numBlocks = 0;
 var muted = false;
 var rulesReady = false;
 var titleReady = false;
-var mobile = false;
 ///arrays
 var blocks = [];
 var squares = [];
@@ -271,12 +283,11 @@ function startGame(){
  gctx.strokeStyle = "#00FF00";
  gctx.fillStyle = "#CCCCCC";
 
- if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent ) ){
+ if(mobile){
  
  document.addEventListener("touchstart" , tstart , false);
  document.addEventListener("touchmove" , tmove , false);
  document.addEventListener("touchend" , tend , false);
- mobile = true;
  console.log("::ON MOBILE::");
 
  }else{

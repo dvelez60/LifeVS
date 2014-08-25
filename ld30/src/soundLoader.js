@@ -29,13 +29,19 @@ function SoundLoader(){
 
  this.lose = new Audio();
  this.lose.src = jsfxr([3,,0.3838,0.7365,0.3396,0.0597,,,,,,,,,,0.4237,-0.2412,-0.1652,1,,,,,0.5]);
-
+ var mus = new Audio("bgMusic.wav");
+ 
  this.startMusic = function(){
 
-  var mus = new Audio();
-  mus.src = "bgMusic.mp3";
+  
+  mus.addEventListener('ended', function(){
+
+	this.currentTime = 0;
+	this.play();
+
+   }),false;
+
   mus.play();
-  console.log("nananananana");
 
  };
 
@@ -47,6 +53,7 @@ function SoundLoader(){
   this.uCreate.muted = true;
   this.win.muted = true;   
   this.lose.muted = true;
+  mus.muted = true;
   muted = true;
 
  };
@@ -59,6 +66,7 @@ function SoundLoader(){
   this.uCreate.muted = false;
   this.win.muted = false;   
   this.lose.muted = false;
+  mus.muted = false;
   muted = false;
 
  };
